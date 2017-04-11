@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f5ec3e8e-cebc-4150-ab33-ea37ff0862d0" activeEnvironment="Default" name="Tr_ePaySys" resourceRoot="${projectDir}" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6e18479b-c18c-460e-99ec-4b259d408ae2" wsaVersion="NONE" name="TR_ePaySysSoap" type="wsdl" bindingName="{http://trainingrite.net/}TR_ePaySysSoap" soapVersion="1_1" anonymous="optional" definition="http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint></con:endpoints><con:operation id="9f4d926b-9b4c-4e44-baff-72cab02f3a51" isOneWay="false" action="http://trainingrite.net/AddNewOrder" name="AddNewOrder" bindingOperationName="AddNewOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5920e537-9516-4e1a-a7a2-15e38d198f77" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:AddNewOrder>\r
+         <!--Optional:-->\r
+         <tra:ItemName>Ravi</tra:ItemName>\r
+         <tra:ItemQty>1</tra:ItemQty>\r
+         <tra:DateOfPurchase>2014-01-12</tra:DateOfPurchase>\r
+         <!--Optional:-->\r
+         <tra:ModeOfPayment>?</tra:ModeOfPayment>\r
+         <!--Optional:-->\r
+         <tra:CreditCardNumber>?</tra:CreditCardNumber>\r
+         <!--Optional:-->\r
+         <tra:CreditCardExpirationMonth>?</tra:CreditCardExpirationMonth>\r
+         <!--Optional:-->\r
+         <tra:CreditCardExpirationYear>?</tra:CreditCardExpirationYear>\r
+         <!--Optional:-->\r
+         <tra:CVV2>231</tra:CVV2>\r
+         <tra:Amount>458</tra:Amount>\r
+      </tra:AddNewOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/AddNewOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ee06c9ee-6656-424f-8055-c9715ebee49f" isOneWay="false" action="http://trainingrite.net/ArchiveCustomer" name="ArchiveCustomer" bindingOperationName="ArchiveCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bc352116-e79a-4c12-983c-8c3defee1878" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:ArchiveCustomer/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/ArchiveCustomer"/></con:call></con:operation><con:operation id="ac737112-5be6-47d2-9897-5f0d8c760548" isOneWay="false" action="http://trainingrite.net/Authorization" name="Authorization" bindingOperationName="Authorization" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="972e3f9b-7522-4509-a206-c5bd80d2d6d5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Authorization>\r
+         <!--Optional:-->\r
+         <tra:strCC>?</tra:strCC>\r
+         <!--Optional:-->\r
+         <tra:strEXPMNTH>?</tra:strEXPMNTH>\r
+         <!--Optional:-->\r
+         <tra:CVV2>?</tra:CVV2>\r
+         <!--Optional:-->\r
+         <tra:strYR>?</tra:strYR>\r
+         <tra:dblAmount>?</tra:dblAmount>\r
+      </tra:Authorization>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Authorization"/></con:call></con:operation><con:operation id="31305512-d8a7-4530-96f5-ca3579982179" isOneWay="false" action="http://trainingrite.net/Capture" name="Capture" bindingOperationName="Capture" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="54df41a5-e12c-4fde-ab4f-41cd854631a2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Capture/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Capture"/></con:call></con:operation><con:operation id="c2f2daeb-dbbe-45ef-9d9e-85d3a113aaf3" isOneWay="false" action="http://trainingrite.net/CashAdvance" name="CashAdvance" bindingOperationName="CashAdvance" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="af0af0f9-b681-4bf2-adf8-36036452c58b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:CashAdvance/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/CashAdvance"/></con:call></con:operation><con:operation id="868a3b21-00dd-47c9-bbb1-623b24966024" isOneWay="false" action="http://trainingrite.net/CreateCustomer" name="CreateCustomer" bindingOperationName="CreateCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bb432bb6-749f-4b38-b815-2b2d34c9049e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:CreateCustomer/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/CreateCustomer"/></con:call></con:operation><con:operation id="f6a4a4d1-4aaa-41c5-ac2d-bcf7553c9a67" isOneWay="false" action="http://trainingrite.net/CreatePassword" name="CreatePassword" bindingOperationName="CreatePassword" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4208e937-88af-49a7-a34c-d2db895a981f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:CreatePassword/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/CreatePassword"/></con:call></con:operation><con:operation id="d3290990-713a-4216-b3d7-d9e99e0c00c7" isOneWay="false" action="http://trainingrite.net/CreateRecurringTransaction" name="CreateRecurringTransaction" bindingOperationName="CreateRecurringTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e9746b52-5f1e-430f-9b55-46fa7280405a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:CreateRecurringTransaction/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/CreateRecurringTransaction"/></con:call></con:operation><con:operation id="97e3c7b1-c4f9-4883-9ea8-5735a5d0ad55" isOneWay="false" action="http://trainingrite.net/EmailReceipt" name="EmailReceipt" bindingOperationName="EmailReceipt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d7e08909-9b7d-44fa-91b6-c0090238e5ff" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:EmailReceipt/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/EmailReceipt"/></con:call></con:operation><con:operation id="0b05a76f-5b31-4ed2-b6b3-0c5a8aa5c305" isOneWay="false" action="http://trainingrite.net/ExportTransaction" name="ExportTransaction" bindingOperationName="ExportTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d4ae4cad-91f6-4966-a0fc-1bcbd542281e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:ExportTransaction/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/ExportTransaction"/></con:call></con:operation><con:operation id="c155dea7-a82a-4f1c-9ad9-c94d7583aef2" isOneWay="false" action="http://trainingrite.net/ForceSale" name="ForceSale" bindingOperationName="ForceSale" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="50f74f79-6780-4c38-9f6a-e5f1da5f8fbe" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:ForceSale/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/ForceSale"/></con:call></con:operation><con:operation id="fa9fd179-a13b-4487-a024-b6c2b5024d87" isOneWay="false" action="http://trainingrite.net/Level3MCRD" name="Level3MCRD" bindingOperationName="Level3MCRD" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8681e2ae-2dd5-4d18-8877-1e213ef2488f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Level3MCRD/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Level3MCRD"/></con:call></con:operation><con:operation id="e6f533ce-26c5-44d7-87fc-95685b05dfb0" isOneWay="false" action="http://trainingrite.net/OrderConfirmation" name="OrderConfirmation" bindingOperationName="OrderConfirmation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="60a1f681-b7c8-40b8-9b3a-9b4fd9c7a210" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:OrderConfirmation>\r
+         <!--Optional:-->\r
+         <tra:Location>?</tra:Location>\r
+         <!--Optional:-->\r
+         <tra:DateFrom>?</tra:DateFrom>\r
+         <!--Optional:-->\r
+         <tra:DateTo>?</tra:DateTo>\r
+         <tra:NumOfRooms>?</tra:NumOfRooms>\r
+         <tra:BidAmount>?</tra:BidAmount>\r
+      </tra:OrderConfirmation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/OrderConfirmation"/></con:call></con:operation><con:operation id="dd034bde-c4ff-4760-82cc-3a3d8956f558" isOneWay="false" action="http://trainingrite.net/Receipt" name="Receipt" bindingOperationName="Receipt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="be1a88ca-2890-4041-a180-7f6047b5f96e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Receipt>\r
+         <!--Optional:-->\r
+         <tra:strEmail>?</tra:strEmail>\r
+         <!--Optional:-->\r
+         <tra:strCC>?</tra:strCC>\r
+         <!--Optional:-->\r
+         <tra:strMM>?</tra:strMM>\r
+         <!--Optional:-->\r
+         <tra:strYY>?</tra:strYY>\r
+         <!--Optional:-->\r
+         <tra:strCVV2>?</tra:strCVV2>\r
+         <tra:dblAmount>?</tra:dblAmount>\r
+      </tra:Receipt>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Receipt"/></con:call></con:operation><con:operation id="3b6d65d4-c7c6-4da9-9db6-d0b1e467e29a" isOneWay="false" action="http://trainingrite.net/Refund" name="Refund" bindingOperationName="Refund" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="999c2d57-0ce7-42af-bc3a-45a2c1a1cb64" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Refund/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Refund"/></con:call></con:operation><con:operation id="103e387b-c6bf-48d0-a1d1-024cd90db396" isOneWay="false" action="http://trainingrite.net/Sale" name="Sale" bindingOperationName="Sale" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8b1acdd3-e662-4ec1-8de9-3e64add8f562" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Sale>\r
+         <!--Optional:-->\r
+         <tra:strCC>?</tra:strCC>\r
+         <!--Optional:-->\r
+         <tra:strEXPMNTH>?</tra:strEXPMNTH>\r
+         <!--Optional:-->\r
+         <tra:CVV2>?</tra:CVV2>\r
+         <!--Optional:-->\r
+         <tra:strYR>?</tra:strYR>\r
+         <tra:dblAmount>?</tra:dblAmount>\r
+      </tra:Sale>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Sale"/></con:call></con:operation><con:operation id="6e904076-ef34-415b-b9a8-a22d22a32782" isOneWay="false" action="http://trainingrite.net/SettleTransaction" name="SettleTransaction" bindingOperationName="SettleTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4b09f105-140c-4ce2-8ab5-b4f5c4bd96ab" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:SettleTransaction/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/SettleTransaction"/></con:call></con:operation><con:operation id="ff28bcba-7588-453e-8c0e-499f907473cb" isOneWay="false" action="http://trainingrite.net/StoreNForward" name="StoreNForward" bindingOperationName="StoreNForward" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0ec75b79-6ed0-4154-870f-d276f3aa6447" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:StoreNForward/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/StoreNForward"/></con:call></con:operation><con:operation id="afc236b5-0287-4353-b755-a420e07bcf77" isOneWay="false" action="http://trainingrite.net/UpdateCustomer" name="UpdateCustomer" bindingOperationName="UpdateCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6aefafae-0a47-4651-b72e-c1f7a33ecb36" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:UpdateCustomer/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/UpdateCustomer"/></con:call></con:operation><con:operation id="2bb89218-ed3b-4dee-8e6b-185f0faa69f9" isOneWay="false" action="http://trainingrite.net/UpdatePassword" name="UpdatePassword" bindingOperationName="UpdatePassword" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9585793c-f593-4d80-a01e-c9fee9397f7a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:UpdatePassword/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/UpdatePassword"/></con:call></con:operation><con:operation id="fd85c7e5-7acf-4bef-b783-053dd5b090f2" isOneWay="false" action="http://trainingrite.net/Void" name="Void" bindingOperationName="Void" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6decb489-e438-4d87-8ec0-41abdd3eda8f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tra="http://trainingrite.net/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tra:Void/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/Void"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="61e926c6-b16f-475d-82aa-863fb03704b8" wsaVersion="NONE" name="TR_ePaySysSoap12" type="wsdl" bindingName="{http://trainingrite.net/}TR_ePaySysSoap12" soapVersion="1_2" anonymous="optional" definition="http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx?wsdl"><con:part><con:url>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://trainingrite.net/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://trainingrite.net/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://trainingrite.net/">
+      <s:element name="Sale">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCC" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strEXPMNTH" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strYR" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dblAmount" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaleResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authorization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCC" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strEXPMNTH" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strYR" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dblAmount" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizationResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Refund">
+        <s:complexType/>
+      </s:element>
+      <s:element name="RefundResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Receipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strCC" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strMM" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strYY" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="strCVV2" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dblAmount" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptResult" type="tns:ArrayOfString"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Void">
+        <s:complexType/>
+      </s:element>
+      <s:element name="VoidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ForceSale">
+        <s:complexType/>
+      </s:element>
+      <s:element name="ForceSaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ForceSaleResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Capture">
+        <s:complexType/>
+      </s:element>
+      <s:element name="CaptureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CaptureResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CashAdvance">
+        <s:complexType/>
+      </s:element>
+      <s:element name="CashAdvanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CashAdvanceResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreNForward">
+        <s:complexType/>
+      </s:element>
+      <s:element name="StoreNForwardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StoreNForwardResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCustomer">
+        <s:complexType/>
+      </s:element>
+      <s:element name="CreateCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCustomerResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCustomer">
+        <s:complexType/>
+      </s:element>
+      <s:element name="UpdateCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateCustomerResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArchiveCustomer">
+        <s:complexType/>
+      </s:element>
+      <s:element name="ArchiveCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ArchiveCustomerResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailReceipt">
+        <s:complexType/>
+      </s:element>
+      <s:element name="EmailReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailReceiptResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExportTransaction">
+        <s:complexType/>
+      </s:element>
+      <s:element name="ExportTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExportTransactionResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRecurringTransaction">
+        <s:complexType/>
+      </s:element>
+      <s:element name="CreateRecurringTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateRecurringTransactionResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SettleTransaction">
+        <s:complexType/>
+      </s:element>
+      <s:element name="SettleTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SettleTransactionResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePassword">
+        <s:complexType/>
+      </s:element>
+      <s:element name="CreatePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePasswordResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassword">
+        <s:complexType/>
+      </s:element>
+      <s:element name="UpdatePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePasswordResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderConfirmation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="DateFrom" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="DateTo" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="NumOfRooms" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="BidAmount" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderConfirmationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderConfirmationResult" type="tns:ArrayOfString"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="ItemQty" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfPurchase" type="s:dateTime"/>
+            <s:element minOccurs="0" maxOccurs="1" name="ModeOfPayment" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardNumber" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardExpirationMonth" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardExpirationYear" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="CVV2" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:float"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewOrderResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Level3MCRD">
+        <s:complexType/>
+      </s:element>
+      <s:element name="Level3MCRDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Level3MCRDResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaleSoapIn">
+    <wsdl:part name="parameters" element="tns:Sale"/>
+  </wsdl:message>
+  <wsdl:message name="SaleSoapOut">
+    <wsdl:part name="parameters" element="tns:SaleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AuthorizationSoapIn">
+    <wsdl:part name="parameters" element="tns:Authorization"/>
+  </wsdl:message>
+  <wsdl:message name="AuthorizationSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="RefundSoapIn">
+    <wsdl:part name="parameters" element="tns:Refund"/>
+  </wsdl:message>
+  <wsdl:message name="RefundSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:Receipt"/>
+  </wsdl:message>
+  <wsdl:message name="ReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiptResponse"/>
+  </wsdl:message>
+  <wsdl:message name="VoidSoapIn">
+    <wsdl:part name="parameters" element="tns:Void"/>
+  </wsdl:message>
+  <wsdl:message name="VoidSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ForceSaleSoapIn">
+    <wsdl:part name="parameters" element="tns:ForceSale"/>
+  </wsdl:message>
+  <wsdl:message name="ForceSaleSoapOut">
+    <wsdl:part name="parameters" element="tns:ForceSaleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CaptureSoapIn">
+    <wsdl:part name="parameters" element="tns:Capture"/>
+  </wsdl:message>
+  <wsdl:message name="CaptureSoapOut">
+    <wsdl:part name="parameters" element="tns:CaptureResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CashAdvanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CashAdvance"/>
+  </wsdl:message>
+  <wsdl:message name="CashAdvanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CashAdvanceResponse"/>
+  </wsdl:message>
+  <wsdl:message name="StoreNForwardSoapIn">
+    <wsdl:part name="parameters" element="tns:StoreNForward"/>
+  </wsdl:message>
+  <wsdl:message name="StoreNForwardSoapOut">
+    <wsdl:part name="parameters" element="tns:StoreNForwardResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCustomer"/>
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ArchiveCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:ArchiveCustomer"/>
+  </wsdl:message>
+  <wsdl:message name="ArchiveCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:ArchiveCustomerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="EmailReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailReceipt"/>
+  </wsdl:message>
+  <wsdl:message name="EmailReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailReceiptResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ExportTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:ExportTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="ExportTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:ExportTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CreateRecurringTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateRecurringTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="CreateRecurringTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateRecurringTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SettleTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:SettleTransaction"/>
+  </wsdl:message>
+  <wsdl:message name="SettleTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:SettleTransactionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CreatePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePassword"/>
+  </wsdl:message>
+  <wsdl:message name="CreatePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePasswordResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassword"/>
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse"/>
+  </wsdl:message>
+  <wsdl:message name="OrderConfirmationSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderConfirmation"/>
+  </wsdl:message>
+  <wsdl:message name="OrderConfirmationSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderConfirmationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AddNewOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewOrder"/>
+  </wsdl:message>
+  <wsdl:message name="AddNewOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewOrderResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Level3MCRDSoapIn">
+    <wsdl:part name="parameters" element="tns:Level3MCRD"/>
+  </wsdl:message>
+  <wsdl:message name="Level3MCRDSoapOut">
+    <wsdl:part name="parameters" element="tns:Level3MCRDResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="TR_ePaySysSoap">
+    <wsdl:operation name="Sale">
+      <wsdl:input message="tns:SaleSoapIn"/>
+      <wsdl:output message="tns:SaleSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <wsdl:input message="tns:AuthorizationSoapIn"/>
+      <wsdl:output message="tns:AuthorizationSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Refund">
+      <wsdl:input message="tns:RefundSoapIn"/>
+      <wsdl:output message="tns:RefundSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Receipt">
+      <wsdl:input message="tns:ReceiptSoapIn"/>
+      <wsdl:output message="tns:ReceiptSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Void">
+      <wsdl:input message="tns:VoidSoapIn"/>
+      <wsdl:output message="tns:VoidSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSale">
+      <wsdl:input message="tns:ForceSaleSoapIn"/>
+      <wsdl:output message="tns:ForceSaleSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <wsdl:input message="tns:CaptureSoapIn"/>
+      <wsdl:output message="tns:CaptureSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CashAdvance">
+      <wsdl:input message="tns:CashAdvanceSoapIn"/>
+      <wsdl:output message="tns:CashAdvanceSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="StoreNForward">
+      <wsdl:input message="tns:StoreNForwardSoapIn"/>
+      <wsdl:output message="tns:StoreNForwardSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:input message="tns:CreateCustomerSoapIn"/>
+      <wsdl:output message="tns:CreateCustomerSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input message="tns:UpdateCustomerSoapIn"/>
+      <wsdl:output message="tns:UpdateCustomerSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveCustomer">
+      <wsdl:input message="tns:ArchiveCustomerSoapIn"/>
+      <wsdl:output message="tns:ArchiveCustomerSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="EmailReceipt">
+      <wsdl:input message="tns:EmailReceiptSoapIn"/>
+      <wsdl:output message="tns:EmailReceiptSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTransaction">
+      <wsdl:input message="tns:ExportTransactionSoapIn"/>
+      <wsdl:output message="tns:ExportTransactionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRecurringTransaction">
+      <wsdl:input message="tns:CreateRecurringTransactionSoapIn"/>
+      <wsdl:output message="tns:CreateRecurringTransactionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SettleTransaction">
+      <wsdl:input message="tns:SettleTransactionSoapIn"/>
+      <wsdl:output message="tns:SettleTransactionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePassword">
+      <wsdl:input message="tns:CreatePasswordSoapIn"/>
+      <wsdl:output message="tns:CreatePasswordSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordSoapIn"/>
+      <wsdl:output message="tns:UpdatePasswordSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="OrderConfirmation">
+      <wsdl:input message="tns:OrderConfirmationSoapIn"/>
+      <wsdl:output message="tns:OrderConfirmationSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewOrder">
+      <wsdl:documentation>Add a new order - GUI Pending</wsdl:documentation>
+      <wsdl:input message="tns:AddNewOrderSoapIn"/>
+      <wsdl:output message="tns:AddNewOrderSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Level3MCRD">
+      <wsdl:input message="tns:Level3MCRDSoapIn"/>
+      <wsdl:output message="tns:Level3MCRDSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TR_ePaySysSoap" type="tns:TR_ePaySysSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Sale">
+      <soap:operation soapAction="http://trainingrite.net/Sale" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <soap:operation soapAction="http://trainingrite.net/Authorization" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refund">
+      <soap:operation soapAction="http://trainingrite.net/Refund" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Receipt">
+      <soap:operation soapAction="http://trainingrite.net/Receipt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Void">
+      <soap:operation soapAction="http://trainingrite.net/Void" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSale">
+      <soap:operation soapAction="http://trainingrite.net/ForceSale" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <soap:operation soapAction="http://trainingrite.net/Capture" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CashAdvance">
+      <soap:operation soapAction="http://trainingrite.net/CashAdvance" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreNForward">
+      <soap:operation soapAction="http://trainingrite.net/StoreNForward" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://trainingrite.net/CreateCustomer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://trainingrite.net/UpdateCustomer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveCustomer">
+      <soap:operation soapAction="http://trainingrite.net/ArchiveCustomer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailReceipt">
+      <soap:operation soapAction="http://trainingrite.net/EmailReceipt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTransaction">
+      <soap:operation soapAction="http://trainingrite.net/ExportTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRecurringTransaction">
+      <soap:operation soapAction="http://trainingrite.net/CreateRecurringTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettleTransaction">
+      <soap:operation soapAction="http://trainingrite.net/SettleTransaction" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePassword">
+      <soap:operation soapAction="http://trainingrite.net/CreatePassword" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://trainingrite.net/UpdatePassword" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderConfirmation">
+      <soap:operation soapAction="http://trainingrite.net/OrderConfirmation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewOrder">
+      <soap:operation soapAction="http://trainingrite.net/AddNewOrder" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Level3MCRD">
+      <soap:operation soapAction="http://trainingrite.net/Level3MCRD" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TR_ePaySysSoap12" type="tns:TR_ePaySysSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Sale">
+      <soap12:operation soapAction="http://trainingrite.net/Sale" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <soap12:operation soapAction="http://trainingrite.net/Authorization" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refund">
+      <soap12:operation soapAction="http://trainingrite.net/Refund" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Receipt">
+      <soap12:operation soapAction="http://trainingrite.net/Receipt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Void">
+      <soap12:operation soapAction="http://trainingrite.net/Void" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForceSale">
+      <soap12:operation soapAction="http://trainingrite.net/ForceSale" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <soap12:operation soapAction="http://trainingrite.net/Capture" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CashAdvance">
+      <soap12:operation soapAction="http://trainingrite.net/CashAdvance" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreNForward">
+      <soap12:operation soapAction="http://trainingrite.net/StoreNForward" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap12:operation soapAction="http://trainingrite.net/CreateCustomer" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap12:operation soapAction="http://trainingrite.net/UpdateCustomer" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveCustomer">
+      <soap12:operation soapAction="http://trainingrite.net/ArchiveCustomer" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailReceipt">
+      <soap12:operation soapAction="http://trainingrite.net/EmailReceipt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportTransaction">
+      <soap12:operation soapAction="http://trainingrite.net/ExportTransaction" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRecurringTransaction">
+      <soap12:operation soapAction="http://trainingrite.net/CreateRecurringTransaction" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettleTransaction">
+      <soap12:operation soapAction="http://trainingrite.net/SettleTransaction" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePassword">
+      <soap12:operation soapAction="http://trainingrite.net/CreatePassword" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap12:operation soapAction="http://trainingrite.net/UpdatePassword" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderConfirmation">
+      <soap12:operation soapAction="http://trainingrite.net/OrderConfirmation" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewOrder">
+      <soap12:operation soapAction="http://trainingrite.net/AddNewOrder" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Level3MCRD">
+      <soap12:operation soapAction="http://trainingrite.net/Level3MCRD" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TR_ePaySys">
+    <wsdl:port name="TR_ePaySysSoap" binding="tns:TR_ePaySysSoap">
+      <soap:address location="http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="TR_ePaySysSoap12" binding="tns:TR_ePaySysSoap12">
+      <soap12:address location="http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint></con:endpoints><con:operation id="7a03e6f8-7cd4-423d-a7eb-1763e34af375" isOneWay="false" action="http://trainingrite.net/AddNewOrder" name="AddNewOrder" bindingOperationName="AddNewOrder" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="72a4d523-a62b-4aeb-997c-d2bd264cbbf5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:AddNewOrder>\r
+         <!--Optional:-->\r
+         <tra:ItemName>?</tra:ItemName>\r
+         <tra:ItemQty>?</tra:ItemQty>\r
+         <tra:DateOfPurchase>?</tra:DateOfPurchase>\r
+         <!--Optional:-->\r
+         <tra:ModeOfPayment>?</tra:ModeOfPayment>\r
+         <!--Optional:-->\r
+         <tra:CreditCardNumber>?</tra:CreditCardNumber>\r
+         <!--Optional:-->\r
+         <tra:CreditCardExpirationMonth>?</tra:CreditCardExpirationMonth>\r
+         <!--Optional:-->\r
+         <tra:CreditCardExpirationYear>?</tra:CreditCardExpirationYear>\r
+         <!--Optional:-->\r
+         <tra:CVV2>?</tra:CVV2>\r
+         <tra:Amount>?</tra:Amount>\r
+      </tra:AddNewOrder>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/AddNewOrderRequest"/></con:call></con:operation><con:operation id="687a7b5f-59d2-460a-8918-3fb1f18be4e4" isOneWay="false" action="http://trainingrite.net/ArchiveCustomer" name="ArchiveCustomer" bindingOperationName="ArchiveCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2be24cca-3a57-4a95-afd1-c0b74a18f5a3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:ArchiveCustomer/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/ArchiveCustomerRequest"/></con:call></con:operation><con:operation id="a856f5e4-64d6-4e07-8c23-a2aca2935c19" isOneWay="false" action="http://trainingrite.net/Authorization" name="Authorization" bindingOperationName="Authorization" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="14bea2ee-a65f-4e28-8642-b3d70cba3650" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Authorization>\r
+         <!--Optional:-->\r
+         <tra:strCC>?</tra:strCC>\r
+         <!--Optional:-->\r
+         <tra:strEXPMNTH>?</tra:strEXPMNTH>\r
+         <!--Optional:-->\r
+         <tra:CVV2>?</tra:CVV2>\r
+         <!--Optional:-->\r
+         <tra:strYR>?</tra:strYR>\r
+         <tra:dblAmount>?</tra:dblAmount>\r
+      </tra:Authorization>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/AuthorizationRequest"/></con:call></con:operation><con:operation id="1f8d86b7-f696-40da-ab3c-ea0ddd802e0b" isOneWay="false" action="http://trainingrite.net/Capture" name="Capture" bindingOperationName="Capture" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aa55728a-87a0-45da-81f6-b7af8e4602d9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Capture/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/CaptureRequest"/></con:call></con:operation><con:operation id="991277d1-a78d-4f6d-b97c-1e2cf4dfc908" isOneWay="false" action="http://trainingrite.net/CashAdvance" name="CashAdvance" bindingOperationName="CashAdvance" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="75fe1dd4-ff38-4bba-9b92-29f0daa507a1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:CashAdvance/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/CashAdvanceRequest"/></con:call></con:operation><con:operation id="4ce7be72-77dc-436a-a549-091e876fa8ec" isOneWay="false" action="http://trainingrite.net/CreateCustomer" name="CreateCustomer" bindingOperationName="CreateCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f1d39582-54c0-488a-b048-081d0829101b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:CreateCustomer/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/CreateCustomerRequest"/></con:call></con:operation><con:operation id="9a46d4a8-a642-430a-9acc-69fdf907dcd6" isOneWay="false" action="http://trainingrite.net/CreatePassword" name="CreatePassword" bindingOperationName="CreatePassword" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7fdb05c1-c509-40c2-9a5b-6ee8a9f103fc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:CreatePassword/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/CreatePasswordRequest"/></con:call></con:operation><con:operation id="23bbe1ce-2b2f-4f1a-a981-256be1920bc7" isOneWay="false" action="http://trainingrite.net/CreateRecurringTransaction" name="CreateRecurringTransaction" bindingOperationName="CreateRecurringTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5e8749d0-5ff5-4a94-9e71-90ea10717d41" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:CreateRecurringTransaction/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/CreateRecurringTransactionRequest"/></con:call></con:operation><con:operation id="3dd70b0b-b16b-4700-9a0d-983983593671" isOneWay="false" action="http://trainingrite.net/EmailReceipt" name="EmailReceipt" bindingOperationName="EmailReceipt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a0014126-1791-4f77-9de6-ee02ac572566" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:EmailReceipt/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/EmailReceiptRequest"/></con:call></con:operation><con:operation id="7c25e191-4efb-4fe0-8cf3-d7b8fa45a654" isOneWay="false" action="http://trainingrite.net/ExportTransaction" name="ExportTransaction" bindingOperationName="ExportTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9ca9fe2f-7dfc-4c9f-817e-aba61e9175dd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:ExportTransaction/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/ExportTransactionRequest"/></con:call></con:operation><con:operation id="8aad4b20-3388-43ed-a904-c8de99f12c69" isOneWay="false" action="http://trainingrite.net/ForceSale" name="ForceSale" bindingOperationName="ForceSale" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="704d7437-3ec5-4fb9-8fa9-e60146489f66" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:ForceSale/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/ForceSaleRequest"/></con:call></con:operation><con:operation id="3caa6584-c7ae-4029-b3ba-d770b550011c" isOneWay="false" action="http://trainingrite.net/Level3MCRD" name="Level3MCRD" bindingOperationName="Level3MCRD" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="475c620b-8c15-4f28-b245-4c0219e59cdf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Level3MCRD/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/Level3MCRDRequest"/></con:call></con:operation><con:operation id="28099e30-16fc-47fc-a3d8-7efea350baf0" isOneWay="false" action="http://trainingrite.net/OrderConfirmation" name="OrderConfirmation" bindingOperationName="OrderConfirmation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eb7ffeb1-e06d-4249-99aa-0f9eb38d0e70" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:OrderConfirmation>\r
+         <!--Optional:-->\r
+         <tra:Location>?</tra:Location>\r
+         <!--Optional:-->\r
+         <tra:DateFrom>?</tra:DateFrom>\r
+         <!--Optional:-->\r
+         <tra:DateTo>?</tra:DateTo>\r
+         <tra:NumOfRooms>?</tra:NumOfRooms>\r
+         <tra:BidAmount>?</tra:BidAmount>\r
+      </tra:OrderConfirmation>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/OrderConfirmationRequest"/></con:call></con:operation><con:operation id="ed50ef70-8309-4200-af33-48bc9e9f291a" isOneWay="false" action="http://trainingrite.net/Receipt" name="Receipt" bindingOperationName="Receipt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1bf5e1a1-cc2b-43ae-b211-e790a3aad156" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Receipt>\r
+         <!--Optional:-->\r
+         <tra:strEmail>?</tra:strEmail>\r
+         <!--Optional:-->\r
+         <tra:strCC>?</tra:strCC>\r
+         <!--Optional:-->\r
+         <tra:strMM>?</tra:strMM>\r
+         <!--Optional:-->\r
+         <tra:strYY>?</tra:strYY>\r
+         <!--Optional:-->\r
+         <tra:strCVV2>?</tra:strCVV2>\r
+         <tra:dblAmount>?</tra:dblAmount>\r
+      </tra:Receipt>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/ReceiptRequest"/></con:call></con:operation><con:operation id="014bfc3d-ff2d-4d6b-8f78-41c334752019" isOneWay="false" action="http://trainingrite.net/Refund" name="Refund" bindingOperationName="Refund" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="127c7f7c-3528-40e1-b9dd-c3133be14d65" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Refund/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/RefundRequest"/></con:call></con:operation><con:operation id="4c5dc53f-6588-4599-83a8-dcb0940d9027" isOneWay="false" action="http://trainingrite.net/Sale" name="Sale" bindingOperationName="Sale" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e6a9befe-a483-46b5-9904-4b2408d0eaed" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Sale>\r
+         <!--Optional:-->\r
+         <tra:strCC>?</tra:strCC>\r
+         <!--Optional:-->\r
+         <tra:strEXPMNTH>?</tra:strEXPMNTH>\r
+         <!--Optional:-->\r
+         <tra:CVV2>?</tra:CVV2>\r
+         <!--Optional:-->\r
+         <tra:strYR>?</tra:strYR>\r
+         <tra:dblAmount>?</tra:dblAmount>\r
+      </tra:Sale>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/SaleRequest"/></con:call></con:operation><con:operation id="6e699b5d-69bb-421c-a496-5b97646cd61a" isOneWay="false" action="http://trainingrite.net/SettleTransaction" name="SettleTransaction" bindingOperationName="SettleTransaction" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="51a749c1-6c86-495b-bb7e-fd2b1aa4a64a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:SettleTransaction/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/SettleTransactionRequest"/></con:call></con:operation><con:operation id="27590389-900e-4a40-9134-f230cf81c0f5" isOneWay="false" action="http://trainingrite.net/StoreNForward" name="StoreNForward" bindingOperationName="StoreNForward" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fdcb9d6a-5bfb-4e23-b4ec-c28c85e5e14a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:StoreNForward/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/StoreNForwardRequest"/></con:call></con:operation><con:operation id="097ad8fe-a86f-47a2-8a97-18325b15f20f" isOneWay="false" action="http://trainingrite.net/UpdateCustomer" name="UpdateCustomer" bindingOperationName="UpdateCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="700bf6b4-ff4d-4a21-aa0e-0f44ef00e8d8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:UpdateCustomer/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/UpdateCustomerRequest"/></con:call></con:operation><con:operation id="9d8f1e76-7234-4556-98fa-d64d25cee1a0" isOneWay="false" action="http://trainingrite.net/UpdatePassword" name="UpdatePassword" bindingOperationName="UpdatePassword" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="404cb6e0-391c-4070-aa92-947962d8b58d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:UpdatePassword/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/UpdatePasswordRequest"/></con:call></con:operation><con:operation id="26c4d443-cab9-4e04-a638-939ee98ddb69" isOneWay="false" action="http://trainingrite.net/Void" name="Void" bindingOperationName="Void" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0fad04bc-fcb2-413a-943a-66f5fbb6f71e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://trainingrite.net/soapui/TrainingRite_ePaySystem/Tr_ePaySys.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tra="http://trainingrite.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tra:Void/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://trainingrite.net/TR_ePaySysSoap/VoidRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
